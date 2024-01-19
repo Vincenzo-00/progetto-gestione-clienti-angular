@@ -1,0 +1,70 @@
+<nav class="navbar bg-body-tertiary">
+  
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Modifica Anagrafica</span>
+  </div>
+
+</nav>
+
+
+
+<form class="row g-3" [formGroup]='modificareForm' (ngSubmit)="onSubmit()">
+
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Nome*</label>
+    <input type="text" class="form-control" id="validationDefault01" formControlName="nome" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Cognome*</label>
+    <input type="text" class="form-control" id="validationDefault02" formControlName="cognome" required>
+  </div>
+
+  <div class="col-md-6">
+    <label for="validationDefault03" class="form-label">Indirizzo</label>
+    <input type="text" class="form-control" id="validationDefault03"  formControlName="indirizzo">
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationDefault05" class="form-label">Località</label>
+    <input type="text" class="form-control" id="validationDefault05" formControlName="localita">
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationDefault05" class="form-label">Comune</label>
+    <input type="text" class="form-control" id="validationDefault05" formControlName="comune">
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationDefault05" class="form-label">Provincia</label>
+    <input type="text" class="form-control" id="validationDefault05" formControlName="provincia">
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email*</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email" required email>
+  </div>
+
+  <div *ngIf="modificareForm.controls.email.invalid && (modificareForm.controls.email.dirty || modificareForm.controls.email.touched)" class="alert alert-danger">
+
+    <div *ngIf="modificareForm.controls.email.errors.required">
+      Email necessaria
+    </div>
+
+    <div *ngIf="modificareForm.controls.email.errors.email">
+      Deve essere un indirizzo email valido
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label for="validationTextarea" class="form-label">Note</label>
+    <textarea class="form-control" id="validationTextarea" formControlName="note"></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-success" [disabled]="!modificareForm.valid" (click)="successNotification()">Modifica cliente</button>
+  <br>
+  <button type="button" class="btn btn-light" routerLink="">Torna indietro</button>
+
+</form>
+

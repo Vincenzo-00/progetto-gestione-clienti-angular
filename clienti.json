@@ -1,0 +1,59 @@
+{
+  "clienti": [
+    {
+      "id": "2",
+      "nome": "Giacomo",
+      "cognome": "Bianco",
+      "localita": "Italia",
+      "email": "giacomo.rossi@gmail.com",
+      "indirizzo": "",
+      "comune": "",
+      "provincia": "",
+      "note": ""
+    },
+    {
+      "id": "ea1f",
+      "nome": "Massimo",
+      "cognome": "Rito",
+      "indirizzo": "Via Roma",
+      "localita": "Roma",
+      "comune": "Roma",
+      "provincia": "Roma",
+      "email": "massimo.rito@gmail.com",
+      "note": "Ciao sono rito"
+    },
+    {
+      "id": "b8a6",
+      "nome": "Jack",
+      "cognome": "Fudino",
+      "indirizzo": "",
+      "localita": "",
+      "comune": "",
+      "provincia": "",
+      "email": "jack.fudino@gmail.com",
+      "note": ""
+    },
+    {
+      "id": "10d9",
+      "nome": "Vincenzo",
+      "cognome": "Vastarella",
+      "indirizzo": "Via Augusto Daolio",
+      "localita": "Rimini",
+      "comune": "Rimini",
+      "provincia": "Rimini",
+      "email": "vince.vasta18@gmail.com",
+      "note": ""
+    },
+    {
+      "id": "9b39",
+      "nome": "Marco",
+      "cognome": "Rossi",
+      "indirizzo": "",
+      "localita": "",
+      "comune": "",
+      "provincia": "",
+      "email": "marco.rossi@gmail.com",
+      "note": ""
+    }
+  ]
+}

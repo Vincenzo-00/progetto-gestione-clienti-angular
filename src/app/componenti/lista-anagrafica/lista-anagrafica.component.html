@@ -1,0 +1,31 @@
+<nav class="navbar bg-body-tertiary shadow-lg p-3 mb-5 bg- container-fluid d-flex p-2 bd-highlight">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Lista clienti</span>
+  </div>
+</nav>
+
+<div class="d-flex justify-content-center">
+  <div class="card contatti" *ngFor="let cliente of clienti">
+      <div class="card-header" style=" background-color: rgb(152, 131, 172);">
+          {{ cliente.nome}} {{ cliente.cognome }}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Indirizzo: {{ cliente.indirizzo}}</li>
+        <li class="list-group-item">Località: {{ cliente.localita}}</li>
+        <li class="list-group-item">Comune: {{ cliente.comune}}</li>
+        <li class="list-group-item">Provincia: {{ cliente.provincia}}</li>
+        <li class="list-group-item">Email: {{ cliente.email}}</li>
+        <li class="list-group-item">Note: {{ cliente.note}}</li>     
+      </ul>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+        <button type="button" class="btn btn-danger" (click)="alertConfirmation(cliente.id)">Elimina cliente</button>
+        <button type="button" class="btn btn-success" (click)="onClienteSelezionato(cliente)" routerLink="modificare">Modifica cliente</button>
+      
+      </div>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-primary buttonInvia" routerLink="aggiungere">Aggiungi cliente</button>
+
